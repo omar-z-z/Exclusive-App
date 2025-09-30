@@ -3,26 +3,16 @@ import Section from "../basicComponents/Section";
 import Card from "../basicComponents/Card";
 import Button from "../basicComponents/Button";
 import CategorySidebar from "./CategorySidebar";
-import CountdownPill from "../basicComponents/CountdownPill";
-import { useCountdown } from "../basicComponents/utilities";
 
 const Hero = () => {
-  const target = useMemo(() => Date.now() + 1000 * 60 * 60 * 24 * 5 + 1000 * 60 * 23 + 1000 * 35, []);
-  const { days, hours, minutes, seconds } = useCountdown(target);
   return (
     <Section className="pt-6">
       <div className="flex gap-6">
         <CategorySidebar />
-        <Card className="relative grid flex-1 grid-cols-1 overflow-hidden bg-black p-6 text-white md:grid-cols-2">
+        <Card className="relative flex-1 overflow-hidden bg-black p-8 text-white grid grid-cols-1 md:grid-cols-2">
           <div className="flex flex-col justify-center gap-4">
             <div className="text-sm text-gray-300">iPhone 14 Series</div>
             <h1 className="text-3xl font-semibold leading-tight">Up to 10% <br />off Voucher</h1>
-            <div className="flex items-center gap-3">
-              <CountdownPill label="Days" value={days} />
-              <CountdownPill label="Hours" value={hours} />
-              <CountdownPill label="Minutes" value={minutes} />
-              <CountdownPill label="Seconds" value={seconds} />
-            </div>
             <Button variant="dark" className="w-32">Shop Now</Button>
           </div>
           <div className="relative">
