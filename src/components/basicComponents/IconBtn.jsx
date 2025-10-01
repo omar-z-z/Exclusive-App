@@ -1,5 +1,5 @@
 const IconBtn = ({ icon: Icon, label }) => (
-  <button aria-label={label} className="grid h-9 w-9 place-items-center rounded-md border border-gray-200 hover:bg-gray-50">
+  <button aria-label={label} className="grid h-8 w-8 bg-gray-200 place-items-center rounded-full hover:bg-gray-100">
     <Icon className="h-5 w-5" />
   </button>
 );

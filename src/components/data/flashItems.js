@@ -2,7 +2,7 @@ const flashItems = [
   {
     id: 1,
     title: "HAVIT HV-G92 Gamepad",
-    img: "https://placehold.co/190x180/f5f5f5/333333?text=Gamepad",
+    img: "https://images.unsplash.com/flagged/photo-1580234820596-0876d136e6d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2FtZXBhZHxlbnwwfHwwfHx8MA%3D%3D",
     price: 120,
     strike: 160,
     discount: 40,
@@ -12,7 +12,7 @@ const flashItems = [
   {
     id: 2,
     title: "AK-900 Wired Keyboard",
-    img: "https://placehold.co/190x180/f5f5f5/333333?text=Keyboard",
+    img: "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8a2V5Ym9hcmR8ZW58MHx8MHx8fDA%3D",
     price: 960,
     strike: 1160,
     discount: 35,
@@ -22,7 +22,7 @@ const flashItems = [
   {
     id: 3,
     title: "IPS LCD Gaming Monitor",
-    img: "https://placehold.co/190x180/f5f5f5/333333?text=Monitor",
+    img: "https://plus.unsplash.com/premium_photo-1680721575441-18d5a0567269?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bW9uaXRvcnxlbnwwfHwwfHx8MA%3D%3D",
     price: 370,
     strike: 400,
     discount: 30,
@@ -32,7 +32,7 @@ const flashItems = [
   {
     id: 4,
     title: "S-Series Comfort Chair",
-    img: "https://placehold.co/190x180/f5f5f5/333333?text=Chair",
+    img: "https://plus.unsplash.com/premium_photo-1664391899883-59de759c56a8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29tZm9ydCUyMGNoYWlyfGVufDB8fDB8fHww",
     price: 375,
     strike: 400,
     discount: 25,
@@ -42,7 +42,7 @@ const flashItems = [
   {
     id: 5,
     title: "Another S-Series Chair",
-    img: "https://placehold.co/190x180/f5f5f5/333333?text=Chair+2",
+    img: "https://images.unsplash.com/photo-1757969687802-82493a29047a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGNvbWZvcnQlMjBjaGFpcnxlbnwwfHwwfHx8MA%3D%3D",
     price: 375,
     strike: 400,
     discount: 25,
@@ -52,7 +52,7 @@ const flashItems = [
   {
     id: 6,
     title: "Portable Bluetooth Speaker",
-    img: "https://placehold.co/190x180/f5f5f5/333333?text=Speaker",
+    img: "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Ymx1ZXRvb3RoJTIwc3BlYWtlcnxlbnwwfHwwfHx8MA%3D%3D",
     price: 65,
     strike: 80,
     discount: 15,
@@ -62,7 +62,7 @@ const flashItems = [
   {
     id: 7,
     title: "Ergonomic Mouse Pad",
-    img: "https://placehold.co/190x180/f5f5f5/333333?text=Mouse+Pad",
+    img: "https://images.unsplash.com/photo-1650566301820-ded93a1bb635?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW91c2UlMjBwYWR8ZW58MHx8MHx8fDA%3D",
     price: 15,
     strike: 20,
     discount: 5,

@@ -61,7 +61,7 @@ const FlashSales = () => {
             </div>
             
             <div className="mt-12 flex justify-center">
-                <button className="bg-[#DB4444] text-white px-12 py-4 rounded hover:bg-red-600 transition-colors font-medium">
+                <button className="bg-[#DB4444] text-white px-12 py-4 rounded hover:bg-red-800 transition-colors font-medium">
                     View All Products
                 </button>
             </div>

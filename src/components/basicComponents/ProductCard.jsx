@@ -14,8 +14,8 @@ const ProductCard = ({ item }) => (
                 <IconBtn label="Wishlist" icon={HeartIcon} />
                 <IconBtn label="QuickView" icon={QuickViewIcon} />    
             </div>
-            <div className="flex items-center justify-center h-60 p-6">
-                <img src={item.img} alt={item.title} className="max-h-full max-w-full object-contain" />
+            <div className="flex items-center justify-center h-60 w-60">
+                <img src={item.img} alt={item.title} className="h-full w-full object-cover" />
             </div>
             <button className="absolute bottom-0 left-0 w-full bg-black text-white py-2 text-center translate-y-full group-hover:translate-y-0 transition-transform duration-300 cursor-pointer">
                 Add To Cart
