@@ -1,10 +1,12 @@
+import { CameraLineIcon, ComputerLineIcon, GamingLineIcon, HeadPhonesLineIcon, PhoneLineIcon, SmartWatchLineIcon } from "../basicComponents/icons";
+
 const browseCategories = [
-  { label: "Phones", icon: "📱" },
-  { label: "Computers", icon: "💻" },
-  { label: "SmartWatch", icon: "⌚" },
-  { label: "Camera", icon: "📷" },
-  { label: "HeadPhones", icon: "🎧" },
-  { label: "Gaming", icon: "🎮" },
+  { label: "Phones", icon: PhoneLineIcon },
+  { label: "Computers", icon: ComputerLineIcon },
+  { label: "SmartWatch", icon: SmartWatchLineIcon },
+  { label: "Camera", icon: CameraLineIcon },
+  { label: "HeadPhones", icon: HeadPhonesLineIcon },
+  { label: "Gaming", icon: GamingLineIcon },
 ];
 
 export default browseCategories;

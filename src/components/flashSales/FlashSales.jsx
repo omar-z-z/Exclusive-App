@@ -3,9 +3,8 @@ import { useCountdown } from "../basicComponents/utilities"
 import ProductCard from "../basicComponents/ProductCard"
 import TimeChip from "./TimeChip"
 import flashItems  from "../data/flashItems"
-import SectionCategory from "../basicComponents/SectionCategory"
 import ArrowButton from "../basicComponents/ArrowButton"
-import Section from "../basicComponents/Section"
+import MainSection from "../basicComponents/MainSection"
 
 const FlashSales = () => {
     const [startIndex, setStartIndex] = useState(0); 
@@ -24,12 +23,12 @@ const FlashSales = () => {
     const { days, hours, minutes, seconds } = useCountdown(target);
 
     return (
-        <Section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 font-sans">
-            <div className="border-b pb-6">
-                <SectionCategory>Today's</SectionCategory>
-                <div className="flex flex-col md:flex-row items-start md:items-end gap-8 md:gap-20 mt-6">
-                    <h2 className="text-4xl font-semibold tracking-wide">Flash Sales</h2>
-                    <div className="flex items-end gap-4">
+        <MainSection head="Today's"
+            title="Flash Sales"
+            right={<div className="md:ml-auto flex gap-2">
+                        <ArrowButton direction="left" onClick={slideLeft} disabled={startIndex === 0}/>
+                        <ArrowButton direction="right" onClick={slideRight} disabled={startIndex >= maxIndex}/>
+                    </div>} middle={<div className="flex items-end gap-4">
                         <TimeChip label="Days" value={days} />
                         <span className="text-3xl font-bold text-[#DB4444]">:</span>
                         <TimeChip label="Hours" value={hours} />
@@ -37,14 +36,8 @@ const FlashSales = () => {
                         <TimeChip label="Minutes" value={minutes} />
                         <span className="text-3xl font-bold text-[#DB4444]">:</span>
                         <TimeChip label="Seconds" value={seconds} />
-                    </div>
-                     <div className="md:ml-auto flex gap-2">
-                        <ArrowButton direction="left" onClick={slideLeft} disabled={startIndex === 0}/>
-                        <ArrowButton direction="right" onClick={slideRight} disabled={startIndex >= maxIndex}/>
-                    </div>
-                </div>
-            </div>
-
+                    </div>}>
+            
             <div className="mt-10">
                 <div className="relative overflow-hidden"> 
                     <div 
@@ -65,7 +58,7 @@ const FlashSales = () => {
                     View All Products
                 </button>
             </div>
-        </Section>
+        </MainSection>
     );
 };
 
