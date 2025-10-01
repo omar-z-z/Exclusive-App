@@ -1,20 +1,23 @@
-import Badge from "../basicComponents/Badge";
-import Section from "../basicComponents/Section";
-import Button from "../basicComponents/Button";
 import ProductCard from "../basicComponents/ProductCard";
 import bestSellers from "../data/bestSellers";
+import MainSection from "../basicComponents/MainSection";
 
 const BestSelling = () => (
-  <Section
-    title={(<div className="flex items-center gap-3"><Badge>This Month</Badge><span className="text-gray-900">Best Selling Products</span></div>)}
-    right={<Button variant="primary">View All</Button>}
+  <MainSection
+    title="Best Selling Products"
+    head="This Month"
+    right={
+      <button className="bg-[#DB4444] text-white px-8 py-2 rounded hover:bg-red-800 transition-colors font-small object-right cursor-pointer">
+        View All
+      </button>
+    }
   >
     <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
       {bestSellers.map((it) => (
-        <ProductCard key={it.title} item={it} />
+        <ProductCard key={it.title} item={it} showBadge={false} />
       ))}
     </div>
-  </Section>
+  </MainSection>
 );
 
-export default BestSelling
+export default BestSelling;

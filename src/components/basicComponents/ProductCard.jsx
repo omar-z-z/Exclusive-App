@@ -4,17 +4,19 @@ import { HeartIcon, QuickViewIcon } from "./icons";
 import StarRating from "./StarRating";
 import IconBtn from "./IconBtn";
 
-const ProductCard = ({ item }) => (
+const ProductCard = ({ item, showBadge = true }) => (
     <div className="group">
         <div className="relative bg-gray-100 rounded overflow-hidden">
-            <div className="absolute top-3 left-3 z-10">
-              <Badge>-{item.discount}%</Badge>
-            </div>
+            {showBadge && (
+                <div className="absolute top-3 left-3 z-10">
+                  <Badge>-{item.discount}%</Badge>
+                </div>
+            )}
             <div className="absolute top-3 right-3 z-10 flex flex-col gap-2">
                 <IconBtn label="Wishlist" icon={HeartIcon} />
                 <IconBtn label="QuickView" icon={QuickViewIcon} />    
             </div>
-            <div className="flex items-center justify-center h-60 w-60">
+            <div className="flex items-center justify-center h-60 w-full">
                 <img src={item.img} alt={item.title} className="h-full w-full object-cover" />
             </div>
             <button className="absolute bottom-0 left-0 w-full bg-black text-white py-2 text-center translate-y-full group-hover:translate-y-0 transition-transform duration-300 cursor-pointer">
