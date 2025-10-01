@@ -1,5 +1,5 @@
-const Badge = ({ children, color = "bg-red-600" }) => (
-  <span className={`rounded px-2 py-0.5 text-xs font-medium text-white ${color}`}>{children}</span>
+const Badge = ({ children, color = "bg-[#DB4444]" }) => (
+  <span className={`px-3 py-1 text-xs text-white rounded ${color}`}>{children}</span>
 );
 
 export default Badge;

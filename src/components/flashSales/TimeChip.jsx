@@ -1,7 +1,7 @@
-const TimeChip = ({ label, value }) => (
-  <div className="rounded-md bg-gray-100 px-3 py-2 text-center">
-    <div className="text-base font-semibold leading-none">{String(value).padStart(2, "0")}</div>
-    <div className="text-[10px] text-gray-500">{label}</div>
+const TimeChip = ({ value, label }) => (
+  <div className="flex flex-col items-center">
+    <span className="text-xs font-medium">{label}</span>
+    <span className="font-bold text-3xl tracking-wider">{value}</span>
   </div>
 );
 

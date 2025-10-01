@@ -18,4 +18,8 @@ const ShieldIcon = () => (
   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3 4 6v6c0 5 3.5 9 8 9s8-4 8-9V6z"/></svg>
 );
 
-export { HeartIcon, CartIcon, UserIcon, TruckIcon, HeadsetIcon, ShieldIcon };
+const QuickViewIcon = () => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+);
+
+export { HeartIcon, CartIcon, UserIcon, TruckIcon, HeadsetIcon, ShieldIcon, QuickViewIcon };

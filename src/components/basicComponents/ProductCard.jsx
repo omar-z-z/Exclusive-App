@@ -1,30 +1,34 @@
-import Card from "./Card"
 import Badge from "./Badge"
-import Button from "./Button"
 import PriceBlock from "./PriceBlock"
+import { HeartIcon, QuickViewIcon } from "./icons";
+import StarRating from "./StarRating";
+import IconBtn from "./IconBtn";
 
-const ProductCard = ({ item, withAdd = false }) => (
-  <Card className="group overflow-hidden">
-    <div className="relative bg-gray-50 p-6">
-      {item.discount ? (
-        <div className="absolute left-3 top-3"><Badge>-{item.discount}%</Badge></div>
-      ) : null}
-      {item.badge ? (
-        <div className="absolute left-3 top-3"><Badge color="bg-green-600">{item.badge}</Badge></div>
-      ) : null}
-      <img alt={item.title} src={item.img} className="mx-auto h-40 w-auto object-contain"/>
-      {withAdd ? (
-        <div className="absolute inset-x-0 bottom-0 translate-y-full bg-gray-900/90 p-3 opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-          <Button className="w-full" variant="primary">Add To Cart</Button>
+const ProductCard = ({ item }) => (
+    <div className="group">
+        <div className="relative bg-gray-100 rounded overflow-hidden">
+            <div className="absolute top-3 left-3 z-10">
+              <Badge>-{item.discount}%</Badge>
+            </div>
+            <div className="absolute top-3 right-3 z-10 flex flex-col gap-2">
+                <IconBtn label="Wishlist" icon={HeartIcon} />
+                <IconBtn label="QuickView" icon={QuickViewIcon} />    
+            </div>
+            <div className="flex items-center justify-center h-60 p-6">
+                <img src={item.img} alt={item.title} className="max-h-full max-w-full object-contain" />
+            </div>
+            <button className="absolute bottom-0 left-0 w-full bg-black text-white py-2 text-center translate-y-full group-hover:translate-y-0 transition-transform duration-300 cursor-pointer">
+                Add To Cart
+            </button>
         </div>
-      ) : null}
+        <div className="mt-4">
+            <h3 className="font-medium text-black truncate">{item.title}</h3>
+            <PriceBlock price={item.price} strike={item.strike} />
+            <div className="mt-2">
+                <StarRating rating={item.rating} count={item.reviews} />
+            </div>
+        </div>
     </div>
-    <div className="px-4 pb-4 pt-2">
-      <div className="truncate text-sm font-medium text-gray-900">{item.title}</div>
-      <PriceBlock price={item.price} strike={item.strike} discount={item.discount} />
-      {!withAdd ? <Button className="mt-3 w-full" variant="outline">Add To Cart</Button> : null}
-    </div>
-  </Card>
 );
 
 export default ProductCard;
