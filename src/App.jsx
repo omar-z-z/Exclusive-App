@@ -7,7 +7,6 @@ import BestSelling from "./components/bestSelling/BestSelling"
 import ExploreProducts from "./components/exploreProducts/ExploreProducts"
 import FeatureTiles from "./components/featureTiles/FeatureTiles"
 import Benefits from "./components/benefits/Benefites"
-import Newsletter from "./components/footer/Newsletter"
 import Footer from "./components/footer/Footer"
 import "./App.css"
 
@@ -24,7 +23,6 @@ function App() {
       <ExploreProducts />
       <FeatureTiles />
       <Benefits />
-      {/* <Newsletter /> */}
       <Footer />
     </div>
   )
