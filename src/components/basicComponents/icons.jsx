@@ -9,13 +9,16 @@ const UserIcon = (p) => (
 );
 
 const TruckIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 7h11v8H3z"/><path d="M14 10h4l3 3v2h-7"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="18.5" cy="18.5" r="1.5"/></svg>
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M3 7h11v8H3z"/><path d="M14 10h4l3 3v2h-7"/><circle cx="7.5" cy="18.5" r="1.5"/><circle cx="18.5" cy="18.5" r="1.5"/></svg>
 );
 const HeadsetIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 12a8 8 0 0 1 16 0"/><path d="M18 19a2 2 0 0 1-2 2h-3v-6h7v1"/><path d="M6 14v4a2 2 0 0 0 2 2h3"/></svg>
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+  </svg>
 );
 const ShieldIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3 4 6v6c0 5 3.5 9 8 9s8-4 8-9V6z"/></svg>
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 3 4 6v6c0 5 3.5 9 8 9s8-4 8-9V6z"/></svg>
 );
 
 const QuickViewIcon = () => (

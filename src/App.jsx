@@ -14,7 +14,7 @@ import "./App.css"
 function App() {
 
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-white text-black">
       <TopBanner />
       <MainNav />
       <Hero />
@@ -24,7 +24,7 @@ function App() {
       <ExploreProducts />
       <FeatureTiles />
       <Benefits />
-      <Newsletter />
+      {/* <Newsletter /> */}
       <Footer />
     </div>
   )

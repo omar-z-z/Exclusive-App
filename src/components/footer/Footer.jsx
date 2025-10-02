@@ -1,7 +1,9 @@
 import Container from "../basicComponents/Container";
+import Newsletter from "./Newsletter";
 
 const Footer = () => (
   <footer className="border-t border-gray-200 bg-white">
+    <Newsletter />
     <Container className="grid grid-cols-2 gap-8 py-12 md:grid-cols-5">
       <div className="col-span-2 md:col-span-1">
         <div className="text-lg font-semibold">Exclusive</div>

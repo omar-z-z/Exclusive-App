@@ -12,6 +12,11 @@ const ProductCard = ({ item, showBadge = true }) => (
                   <Badge>-{item.discount}%</Badge>
                 </div>
             )}
+            {item.badge && !showBadge && (
+                <div className="absolute top-3 left-3 z-10">
+                  <Badge color="bg-green-400">{item.badge}</Badge>
+                </div>
+            )}
             <div className="absolute top-3 right-3 z-10 flex flex-col gap-2">
                 <IconBtn label="Wishlist" icon={HeartIcon} />
                 <IconBtn label="QuickView" icon={QuickViewIcon} />    

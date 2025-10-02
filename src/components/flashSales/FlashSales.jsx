@@ -5,6 +5,7 @@ import TimeChip from "./TimeChip"
 import flashItems  from "../data/flashItems"
 import ArrowButton from "../basicComponents/ArrowButton"
 import MainSection from "../basicComponents/MainSection"
+import Button from "../basicComponents/Button"
 
 const FlashSales = () => {
     const [startIndex, setStartIndex] = useState(0); 
@@ -54,9 +55,7 @@ const FlashSales = () => {
             </div>
             
             <div className="mt-12 flex justify-center">
-                <button className="bg-[#DB4444] text-white px-12 py-4 rounded hover:bg-red-800 transition-colors font-medium">
-                    View All Products
-                </button>
+                <Button variant="primary" className="px-12 py-4">View All Products</Button>
             </div>
         </MainSection>
     );
