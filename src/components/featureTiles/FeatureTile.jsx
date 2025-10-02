@@ -3,12 +3,12 @@ import Button from "../basicComponents/Button";
 
 const FeatureTile = ({ title, description, button="Shop Now",className = "", children }) => {
     return (
-        <Card className="relative overflow-hidden p-6 text-white">
-            {children}
-            <div className={`${className}`}>
-                <h3 className="text-xl font-semibold">{title}</h3>
-                <p className="mt-1 text-sm text-gray-300">{description}</p>
-                <Button variant="dark" className="mt-4">{button}</Button>
+        <Card className="relative overflow-hidden p-10 text-white h-full flex flex-col justify-end">
+            {children} 
+            <div className={`z-10 ${className}`}>
+                <h2 className="text-3xl font-bold text-bo">{title}</h2> 
+                <p className="mt-3 text-base text-gray-50 max-w-xs">{description}</p>
+                <Button variant="outline" className="mt-6 border-white text-white hover:bg-gray-100 hover:text-black transition duration-300">{button}</Button>
             </div>
       </Card>
     )
