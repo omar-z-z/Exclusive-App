@@ -48,7 +48,8 @@ const exploreProducts = [
         discount: 20, 
         rating: 4.6,
         reviews: 45,
-        badge: "NEW" 
+        badge: "NEW",
+        colors: ["#000000", "#FFFF88", "#FF0000"] 
     },
     { 
         id: 206, 
@@ -59,7 +60,8 @@ const exploreProducts = [
         discount: 20, 
         rating: 4.1,
         reviews: 88,
-        badge: "NEW" 
+        badge: "NEW",
+        colors: ["#000000", "#88FF88", "#8888FF"] 
     },
     { 
         id: 207, 
@@ -80,6 +82,7 @@ const exploreProducts = [
         discount: 20, 
         rating: 4.5,
         reviews: 60,
+        colors: ["#000000", "#FF88FF", "#8888FF"]
     },
 ];
 
