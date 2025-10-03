@@ -10,6 +10,18 @@ const ProductCard = ({ item, showBadge = true }) => {
     const handleColorClick = (color) => {
         setSelectedColor(color);
     };
+    const handleWishButton = () => {
+        console.log("Wishlist clicked for", item.title);
+        // Implement wishlist functionality here
+    }
+    const handleQuickVButton = () => {
+        console.log("QuickView clicked for", item.title);
+        // Implement QuickView functionality here
+    }
+    const handleAddToCart = () => {
+        console.log("Add to Cart clicked for", item.title);
+        // Implement Add to Cart functionality here
+    }
   return (
     <div className="group">
       <div className="relative bg-gray-100 rounded overflow-hidden">
@@ -24,8 +36,8 @@ const ProductCard = ({ item, showBadge = true }) => {
           </div>
         )}
         <div className="absolute top-3 right-3 z-10 flex flex-col gap-2">
-          <IconBtn label="Wishlist" icon={HeartIcon} />
-          <IconBtn label="QuickView" icon={QuickViewIcon} />
+          <IconBtn label="Wishlist" icon={HeartIcon} onClick={handleWishButton} />
+          <IconBtn label="QuickView" icon={QuickViewIcon} onClick={handleQuickVButton}/>
         </div>
         <div className="flex items-center justify-center h-60 w-full">
           <img
@@ -34,7 +46,7 @@ const ProductCard = ({ item, showBadge = true }) => {
             className="h-full w-full object-cover"
           />
         </div>
-        <button className="absolute bottom-0 left-0 w-full bg-black text-white py-2 text-center translate-y-full group-hover:translate-y-0 transition-transform duration-300 cursor-pointer">
+        <button onClick={handleAddToCart} className="absolute bottom-0 left-0 w-full bg-black text-white py-2 text-center translate-y-full group-hover:translate-y-0 transition-transform duration-300 cursor-pointer">
           Add To Cart
         </button>
       </div>

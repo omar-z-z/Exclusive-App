@@ -2,7 +2,6 @@ import { HeartIcon, CartIcon, UserIcon } from "../basicComponents/icons";
 import Container from "../basicComponents/Container";
 import IconBtn from "../basicComponents/IconBtn";
 import { useState } from "react";
-import MainNavButton from "./MainNavButton";
 
 const MainNav = () => {
   const [clickedButton, setClickedButton] = useState("Home");
@@ -22,6 +21,18 @@ const MainNav = () => {
     e.preventDefault(); 
     setClickedButton(item);
   };
+  const handleWishB = () => {
+    console.log("Wishlist clicked");
+    // here we put the wishlist function
+  }
+  const handleCartB = () => {
+    console.log("Cart clicked");
+    // here we put the cart function
+  }
+  const handleAccountB = () => {
+    console.log("Account clicked");
+    // here we put the account function
+  }
 
   return (
     <header className="border-b border-gray-200 bg-white">
@@ -78,9 +89,9 @@ const MainNav = () => {
             </label>
           </div>
           <div className="flex items-center gap-2">
-            <IconBtn label="Wishlist" icon={HeartIcon} />
-            <IconBtn label="Cart" icon={CartIcon} />
-            <IconBtn label="Account" icon={UserIcon} />
+            <IconBtn label="Wishlist" icon={HeartIcon} onClick={handleWishB}/>
+            <IconBtn label="Cart" icon={CartIcon} onClick={handleCartB}/>
+            <IconBtn label="Account" icon={UserIcon} onClick={handleAccountB}/>
           </div>
         </div>
       </Container>

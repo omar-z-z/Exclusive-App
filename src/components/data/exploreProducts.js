@@ -2,7 +2,7 @@ const exploreProducts = [
     { 
         id: 201, 
         title: "Breed Dry Dog Food", 
-        img: "https://plus.unsplash.com/premium_photo-1726761692986-6bcde87fc2b8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8ZG9nJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D",
+        img: "https://images.unsplash.com/photo-1714068691210-073dc52c6c1d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZG9nJTIwZm9vZHxlbnwwfHwwfHx8MA%3D%3D",
         price: 100, 
         strike: 120, 
         discount: 17,

@@ -73,7 +73,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="tel:+88015888889999" className="hover:text-white">
+              <a href="tel:+999888889999" className="hover:text-white">
                 +999-88888-9999
               </a>
             </li>
@@ -83,21 +83,21 @@ const Footer = () => {
         <div>
           <div className="text-xl font-bold">Account</div>
           <ul className="mt-6 space-y-4 text-sm text-gray-400">
-            <li>My Account</li>
-            <li>Login / Register</li>
-            <li>Cart</li>
-            <li>Wishlist</li>
-            <li>Shop</li>
+            <li><a href="" className="hover:text-white">My Account</a></li>
+            <li><a href="" className="hover:text-white">Login / Register</a></li>
+            <li><a href="" className="hover:text-white">Cart</a></li>
+            <li><a href="" className="hover:text-white">Wishlist</a></li>
+            <li><a href="" className="hover:text-white">Shop</a></li>
           </ul>
         </div>
 
         <div>
           <div className="text-xl font-bold">Quick Link</div>
           <ul className="mt-6 space-y-4 text-sm text-gray-400">
-            <li>Privacy Policy</li>
-            <li>Terms Of Use</li>
-            <li>FAQ</li>
-            <li>Contact</li>
+            <li><a href="" className="hover:text-white">Privacy Policy</a></li>
+            <li><a href="" className="hover:text-white">Terms Of Use</a></li>
+            <li><a href="" className="hover:text-white">FAQ</a></li>
+            <li><a href="" className="hover:text-white">Contact</a></li>
           </ul>
         </div>
 

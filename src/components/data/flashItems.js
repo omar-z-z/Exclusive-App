@@ -22,7 +22,7 @@ const flashItems = [
   {
     id: 3,
     title: "IPS LCD Gaming Monitor",
-    img: "https://plus.unsplash.com/premium_photo-1680721575441-18d5a0567269?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bW9uaXRvcnxlbnwwfHwwfHx8MA%3D%3D",
+    img: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Z2FtaW5nJTIwbW9uaXRvcnxlbnwwfHwwfHx8MA%3D%3D",
     price: 370,
     strike: 400,
     discount: 30,
@@ -32,7 +32,7 @@ const flashItems = [
   {
     id: 4,
     title: "S-Series Comfort Chair",
-    img: "https://plus.unsplash.com/premium_photo-1664391899883-59de759c56a8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29tZm9ydCUyMGNoYWlyfGVufDB8fDB8fHww",
+    img: "https://images.unsplash.com/photo-1685380042854-daf3785a1e3c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29tZm9ydCUyMGNoYWlyfGVufDB8fDB8fHww",
     price: 375,
     strike: 400,
     discount: 25,
