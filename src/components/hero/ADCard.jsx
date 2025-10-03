@@ -64,7 +64,7 @@ const ADCard = ({ slides = [], interval = 5000 }) => {
         >
           {extendedSlides.map((s, i) => (
             <div
-              key={s.id ?? i}
+              key={i}
               role="group"
               style={{ width: `${100 / extendedCount}%` }}
               className="flex flex-shrink-0 items-center justify-between gap-6 px-4"
