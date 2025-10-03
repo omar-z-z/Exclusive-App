@@ -46,7 +46,7 @@ const ProductCard = ({ item, showBadge = true }) => {
             className="h-full w-full object-cover"
           />
         </div>
-        <button onClick={handleAddToCart} className="absolute bottom-0 left-0 w-full bg-black text-white py-2 text-center translate-y-full group-hover:translate-y-0 transition-transform duration-300 cursor-pointer">
+        <button onClick={handleAddToCart} className="absolute bottom-0 left-0 w-full bg-black text-white py-2 text-center mb-[-1px] translate-y-full group-hover:translate-y-0 transition-transform duration-300 cursor-pointer">
           Add To Cart
         </button>
       </div>

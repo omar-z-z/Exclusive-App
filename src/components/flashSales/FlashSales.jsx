@@ -21,6 +21,9 @@ const FlashSales = () => {
         setStartIndex(prev => Math.max(prev - 1, 0));
     };
     const target = useMemo(() => Date.now() + 1000 * 60 * 60 * (3 + 24 * 3) + 1000 * 60 * 23 + 1000 * 56, []);
+    // here we set the target to 3 days, 3 hours, 23 minutes, and 56 seconds from now
+    // you can adjust this to any future date/time as needed
+    // Example: new Date('2025-10-5T23:59:59').getTime()
     const { days, hours, minutes, seconds } = useCountdown(target);
 
     const handleViewAll = () => {
