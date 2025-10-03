@@ -23,6 +23,11 @@ const FlashSales = () => {
     const target = useMemo(() => Date.now() + 1000 * 60 * 60 * (3 + 24 * 3) + 1000 * 60 * 23 + 1000 * 56, []);
     const { days, hours, minutes, seconds } = useCountdown(target);
 
+    const handleViewAll = () => {
+        // Implement the logic for viewing all products
+        console.log("View All Products in flash sales clicked");
+    }
+
     return (
         <MainSection head="Today's"
             title="Flash Sales"
@@ -55,7 +60,7 @@ const FlashSales = () => {
             </div>
             
             <div className="mt-12 flex justify-center">
-                <Button variant="primary" className="px-12 py-4">View All Products</Button>
+                <Button variant="primary" className="px-12 py-4" onClick={handleViewAll}>View All Products</Button>
             </div>
         </MainSection>
     );
