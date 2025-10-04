@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react"
+import { useMemo, useState, useEffect } from "react"
 import { useCountdown } from "../basicComponents/utilities"
 import ProductCard from "../basicComponents/ProductCard"
 import TimeChip from "./TimeChip"
@@ -10,9 +10,23 @@ import Button from "../basicComponents/Button"
 const FlashSales = () => {
     const [startIndex, setStartIndex] = useState(0); 
 
-    const cardsPerPage = 4.5;
+    const [cardsPerPage, setCardsPerPage] = useState(4.5);
+
+    useEffect(() => {
+    const updateCardsPerPage = () => {
+        if (window.innerWidth < 640) setCardsPerPage(1.5); 
+        else if (window.innerWidth < 1024) setCardsPerPage(2.5); 
+        else setCardsPerPage(4.5); 
+    };
+    
+    updateCardsPerPage();
+    window.addEventListener("resize", updateCardsPerPage);
+    return () => window.removeEventListener("resize", updateCardsPerPage);
+    }, []);
+
+    const cardWidthPercentage = (1 / cardsPerPage) * 100;
+
     const maxIndex = flashItems.length - Math.floor(cardsPerPage);
-    const cardWidthPercentage = (1 / cardsPerPage) * 100; 
     const slideRight = () => {
         setStartIndex(prev => Math.min(prev + 1, maxIndex));
     };
@@ -54,7 +68,7 @@ const FlashSales = () => {
                         style={{ transform: `translateX(-${startIndex * cardWidthPercentage}%)` }}
                     >
                         {flashItems.map((item) => (
-                            <div key={item.id} style={{ width: `${cardWidthPercentage}%` }} className="px-4 flex-shrink-0">
+                            <div key={item.id} style={{ width: `${cardWidthPercentage}%` }} className="px-2 sm:px-4 flex-shrink-0">
                                 <ProductCard item={item} />
                             </div>
                         ))}

@@ -39,11 +39,11 @@ const ProductCard = ({ item, showBadge = true }) => {
           <IconBtn label="Wishlist" icon={HeartIcon} onClick={handleWishButton} />
           <IconBtn label="QuickView" icon={QuickViewIcon} onClick={handleQuickVButton}/>
         </div>
-        <div className="flex items-center justify-center h-60 w-full">
+        <div className="w-full aspect-square flex items-center justify-center bg-white">
           <img
             src={item.img}
             alt={item.title}
-            className="h-full w-full object-cover"
+            className="w-full h-full object-contain"
           />
         </div>
         <button onClick={handleAddToCart} className="absolute bottom-0 left-0 w-full bg-black text-white py-2 text-center mb-[-1px] translate-y-full group-hover:translate-y-0 transition-transform duration-300 cursor-pointer">

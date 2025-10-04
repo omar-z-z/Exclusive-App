@@ -72,14 +72,14 @@ const ADCard = ({ slides = [], interval = 5000 }) => {
               <div className="w-1/2 max-w-[620px] flex flex-col justify-center gap-4">
                 <div className="flex items-center gap-2 text-sm text-gray-300">
                   {s.badge ? (
-                    <span className="inline-flex items-center rounded-full bg-white/10 px-2 py-1 text-xs">
+                    <span className="inline-flex items-center rounded-full bg-white/10 px-2 py-1 text-[10px] sm:text-xs">
                       {s.badge}
                     </span>
                   ) : null}
                   {s.kicker ? <span>{s.kicker}</span> : null}
                 </div>
 
-                <h2 className="text-4xl font-bold leading-snug">
+                <h2 className="text-2xl sm:text-4xl font-bold leading-snug">
                   {s.titleLines?.map((l, idx) => (
                     <React.Fragment key={idx}>
                       {l}
@@ -94,7 +94,6 @@ const ADCard = ({ slides = [], interval = 5000 }) => {
                 >
                   {s.ctaText || "Shop Now"}
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -115,7 +114,7 @@ const ADCard = ({ slides = [], interval = 5000 }) => {
                 <img
                   alt={s.alt || `slide-${i}`}
                   src={s.img}
-                  className="h-[250px] w-[300px] object-contain object-center"
+                  className="max-h-[250px] w-full max-w-[300px] object-contain object-center"
                 />
               </div>
             </div>

@@ -6,6 +6,7 @@ import { useState } from "react";
 const MainNav = () => {
   const [clickedButton, setClickedButton] = useState("Home");
   const [searchText, setSearchText] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleSearchChange = (e) => {
     setSearchText(e.target.value);
@@ -18,30 +19,71 @@ const MainNav = () => {
   };
 
   const handleClickButton = (e, item) => {
-    e.preventDefault(); 
+    e.preventDefault();
     setClickedButton(item);
   };
   const handleWishB = () => {
     console.log("Wishlist clicked");
     // here we put the wishlist function
-  }
+  };
   const handleCartB = () => {
     console.log("Cart clicked");
     // here we put the cart function
-  }
+  };
   const handleAccountB = () => {
     console.log("Account clicked");
     // here we put the account function
-  }
+  };
 
   return (
-    <header className="border-b border-gray-200 bg-white">
+    <header className="border-b border-gray-200 bg-white relative z-30">
       <Container className="flex items-center h-16">
+        <button
+          className="mr-2 md:hidden text-gray-700 hover:text-black"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          )}
+        </button>
         <div className="flex-shrink-0 text-2xl font-extrabold tracking-tight">
           Exclusive
         </div>
-        <nav className="hidden md:flex flex-1 justify-center">
-          <ul className="flex items-end gap-8 text-sm">
+        <nav
+          className={`
+            ${menuOpen ? "block" : "hidden"}
+            absolute top-16 left-0 w-full bg-white border-t md:border-0 md:static md:flex md:items-center md:justify-center z-20
+          `}
+        >
+          <ul className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-sm p-4 md:p-0">
             {["Home", "Contact", "About", "Sign Up"].map((item) => {
               const isClicked = clickedButton === item;
               return (
@@ -89,9 +131,9 @@ const MainNav = () => {
             </label>
           </div>
           <div className="flex items-center gap-2">
-            <IconBtn label="Wishlist" icon={HeartIcon} onClick={handleWishB}/>
-            <IconBtn label="Cart" icon={CartIcon} onClick={handleCartB}/>
-            <IconBtn label="Account" icon={UserIcon} onClick={handleAccountB}/>
+            <IconBtn label="Wishlist" icon={HeartIcon} onClick={handleWishB} />
+            <IconBtn label="Cart" icon={CartIcon} onClick={handleCartB} />
+            <IconBtn label="Account" icon={UserIcon} onClick={handleAccountB} />
           </div>
         </div>
       </Container>

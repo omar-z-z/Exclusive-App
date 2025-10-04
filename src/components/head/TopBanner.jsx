@@ -1,6 +1,3 @@
-
-
-
 import { useState } from "react";
 import Container from "../basicComponents/Container";
 
@@ -8,7 +5,7 @@ const TopBanner = () => {
   const [lang, setLang] = useState("en");
 
   return (
-    <div className="w-full bg-black text-white text-sm">
+    <div className="hidden sm:block w-full bg-black text-white text-sm">
       <Container className="flex items-center py-2 text-sm">
         <div className="mx-auto flex items-center gap-2">
           <span>
