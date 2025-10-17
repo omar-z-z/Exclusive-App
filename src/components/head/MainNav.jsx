@@ -83,7 +83,7 @@ const MainNav = ({rightIcons=true}) => {
             absolute top-16 left-0 w-full bg-white border-t md:border-0 md:static md:flex md:items-center md:justify-center z-20
           `}
         >
-          <ul className="flex flex-col md:flex-row items-center gap-4 md:gap-8 text-sm p-4 md:p-0">
+          <ul className="flex flex-col md:flex-row items-center gap-4 lg:gap-8 text-sm p-4 md:p-0">
             {["Home", "Contact", "About", "Sign Up"].map((item) => {
               const isClicked = clickedButton === item;
               return (
