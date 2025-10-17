@@ -3,7 +3,7 @@ import Container from "../basicComponents/Container";
 import IconBtn from "../basicComponents/IconBtn";
 import { useState } from "react";
 
-const MainNav = () => {
+const MainNav = ({rightIcons=true}) => {
   const [clickedButton, setClickedButton] = useState("Home");
   const [searchText, setSearchText] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
@@ -130,11 +130,11 @@ const MainNav = () => {
               </svg>
             </label>
           </div>
-          <div className="flex items-center gap-2">
+          {rightIcons && <div className="flex items-center gap-2">
             <IconBtn label="Wishlist" icon={HeartIcon} onClick={handleWishB} />
             <IconBtn label="Cart" icon={CartIcon} onClick={handleCartB} />
             <IconBtn label="Account" icon={UserIcon} onClick={handleAccountB} />
-          </div>
+          </div>}
         </div>
       </Container>
     </header>
