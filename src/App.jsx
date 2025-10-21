@@ -4,6 +4,7 @@ import LogIn from "./pages/LogIn"
 import SignUp from "./pages/SignUp"
 import Cart from "./pages/Cart"
 import Checkout from "./pages/Checkout"
+import ProductDetailsPage from "./pages/ProductDetailsPage"
 
 function App() {
 
@@ -13,7 +14,8 @@ function App() {
       {/* <LogIn /> */}
       {/* <SignUp /> */}
       {/* <Cart /> */}
-      <Checkout />
+      {/* <Checkout /> */}
+      <ProductDetailsPage />
     </>
   )
 }
