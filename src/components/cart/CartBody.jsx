@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Button from "../basicComponents/Button";
 import bestSellers from "../data/bestSellers";
+import Section from "../basicComponents/Section";
 
 const CartBody = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -35,7 +36,7 @@ const CartBody = () => {
   );
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10">
+    <Section className="max-w-7xl mx-auto px-4 py-10">
       <div className="text-sm md:text-md text-gray-600 mb-8">
         <a href="#" className="hover:text-red-800">Home</a> / <span className="font-semibold text-gray-900">Cart</span>
       </div>
@@ -150,7 +151,7 @@ const CartBody = () => {
           </Button>
         </div>
       </div>
-    </div>
+    </Section>
   );
 };
 
