@@ -3,9 +3,11 @@ import BillingForm from './BillingForm';
 import OrderSummary from './OrderSummary';
 import bestSellers from '../data/bestSellers';
 import Section from '../basicComponents/Section';
+import { useNavigate } from 'react-router-dom';
 
 const CheckoutBody = () => {
     const [cartItems, setCartItems] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const initialItems = bestSellers.map(({ id, title, price }) => ({
@@ -51,6 +53,7 @@ const CheckoutBody = () => {
 
         console.log("Placing order with data:", formData, "Payment:", paymentMethod, "Total:", total);
         alert(`Order placed! Total: $${total}. Payment method: ${paymentMethod}. (Form data logged to console)`);
+        navigate("/")
     };
     
     const handleSaveInfoChange = (isChecked) => {

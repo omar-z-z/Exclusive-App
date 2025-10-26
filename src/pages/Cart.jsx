@@ -8,7 +8,7 @@ function Cart() {
   return (
     <div className="min-h-screen bg-white text-black">
       <TopBanner />
-      <MainNav />
+      <MainNav buttonClicked="Home" />
       <main>
         <CartBody />
       </main>

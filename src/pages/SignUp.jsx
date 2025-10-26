@@ -9,7 +9,7 @@ function SignUp() {
   return (
     <div className="min-h-screen bg-white text-black">
       <TopBanner />
-      <MainNav rightIcons={false}/>
+      <MainNav rightIcons={false} buttonClicked="Sign Up"/>
       <main>
         <SignUpPage />
       </main>

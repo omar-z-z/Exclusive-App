@@ -2,9 +2,12 @@ import { useState, useEffect } from "react";
 import Button from "../basicComponents/Button";
 import bestSellers from "../data/bestSellers";
 import Section from "../basicComponents/Section";
+import { useNavigate } from "react-router-dom";
 
 const CartBody = () => {
   const [cartItems, setCartItems] = useState([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const initialItems = bestSellers.map(({ id, title, img, price }) => ({
@@ -102,6 +105,7 @@ const CartBody = () => {
         <Button
           variant="outline"
           className="md:text-lg md:px-10 md:py-3 border-gray-800"
+          onClick={() => navigate("/")}
         >
           Return To Shop
         </Button>
@@ -146,6 +150,7 @@ const CartBody = () => {
           <Button
             variant="primary"
             className="w-full md:text-lg md:px-8 md:py-3"
+            onClick={() => navigate("/checkout")}
           >
             Proceed to Checkout
           </Button>

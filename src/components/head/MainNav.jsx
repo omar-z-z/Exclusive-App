@@ -2,9 +2,11 @@ import { HeartIcon, CartIcon, UserIcon } from "../basicComponents/icons";
 import Container from "../basicComponents/Container";
 import IconBtn from "../basicComponents/IconBtn";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const MainNav = ({rightIcons=true}) => {
-  const [clickedButton, setClickedButton] = useState("Home");
+const MainNav = ({rightIcons=true, buttonClicked="Home"}) => {
+  const navigate = useNavigate();
+  const [clickedButton, setClickedButton] = useState(buttonClicked);
   const [searchText, setSearchText] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -21,18 +23,26 @@ const MainNav = ({rightIcons=true}) => {
   const handleClickButton = (e, item) => {
     e.preventDefault();
     setClickedButton(item);
+
+    if (item === "Home") navigate("/");
+    else if (item === "Contact") navigate("/contact");
+    else if (item === "About") navigate("/about");
+    else if (item === "Sign Up") navigate("/signup");
   };
   const handleWishB = () => {
     console.log("Wishlist clicked");
     // here we put the wishlist function
+    navigate("/wishlist");
   };
   const handleCartB = () => {
     console.log("Cart clicked");
     // here we put the cart function
+    navigate("/cart");
   };
   const handleAccountB = () => {
     console.log("Account clicked");
     // here we put the account function
+    navigate("/login");
   };
 
   return (

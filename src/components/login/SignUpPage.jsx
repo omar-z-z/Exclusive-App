@@ -1,11 +1,14 @@
 import { useState } from "react";
 import Section from "../basicComponents/Section";
 import login from "../../assets/login.jpg";
+import { useNavigate } from "react-router-dom";
 
 const SignUpPage = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const navigate = useNavigate();
 
     const handleSignUp = (e) => {
         e.preventDefault();
@@ -86,7 +89,12 @@ const SignUpPage = () => {
                                 <div className="text-center">
                                     <p className="text-gray-600">
                                         Already have account? 
-                                        <a href="#" className="text-gray-800 font-medium hover:underline ml-1">Log in</a>
+                                        <button
+                                            onClick={() => navigate("/login")}
+                                            className="text-gray-800 font-medium hover:underline ml-1"
+                                            >
+                                            Log in
+                                        </button>
                                     </p>
                                 </div>
                             </form>
