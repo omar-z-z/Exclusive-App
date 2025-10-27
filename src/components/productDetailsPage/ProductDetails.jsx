@@ -1,5 +1,4 @@
 import { useState, useMemo } from "react";
-import bestSellers from "../data/bestSellers";
 import ProductCard from "../basicComponents/ProductCard";
 import SectionCategory from "../basicComponents/SectionCategory";
 import Section from "../basicComponents/Section";
@@ -7,6 +6,7 @@ import StarRating from "../basicComponents/StarRating";
 import { HeartIcon, TruckIcon, ReturnIcon } from "../basicComponents/icons";
 import ProductImageGallery from "./ProductImageGallery";
 import ProductDetailsInfo from "./ProductDetailsInfo";
+import flashItems from "../data/flashItems";
 
 
 const productData = {
@@ -77,7 +77,7 @@ const ProductDetails = () => {
             <SectionCategory>Related Items</SectionCategory>
           </div>
           <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-            {bestSellers.map((it) => (
+            {flashItems.map((it) => (
               <ProductCard key={it.title} item={it} showBadge={true} />
             ))}
           </div>

@@ -24,7 +24,7 @@ const ProductCard = ({ item, showBadge = true }) => {
     const handleAddToCart = () => {
         console.log("Add to Cart clicked for", item.title);
         addToCart(item);
-        // Implement Add to Cart functionality here
+        alert(`${item.title} added to cart!`);
     }
   return (
     <div className="group">
