@@ -26,19 +26,3 @@ function App() {
 }
 
 export default App;
-
-// function App() {
-
-//   return (
-//     <>
-//       <HomePage />
-//       {/* <LogIn /> */}
-//       {/* <SignUp /> */}
-//       {/* <Cart /> */}
-//       {/* <Checkout /> */}
-//       {/* <ProductDetailsPage /> */}
-//     </>
-//   )
-// }
-
-// export default App

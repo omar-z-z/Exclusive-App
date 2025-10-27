@@ -4,12 +4,15 @@ import { HeartIcon, QuickViewIcon, ColorIcon } from "./icons";
 import StarRating from "./StarRating";
 import IconBtn from "./IconBtn";
 import { useState } from "react";
+import { useCart } from "../../context/CartContext";
 
 const ProductCard = ({ item, showBadge = true }) => {
     const [selectedColor, setSelectedColor] = useState(item.colors ? item.colors[0] : null);
     const handleColorClick = (color) => {
         setSelectedColor(color);
     };
+    const { addToCart } = useCart();
+
     const handleWishButton = () => {
         console.log("Wishlist clicked for", item.title);
         // Implement wishlist functionality here
@@ -20,6 +23,7 @@ const ProductCard = ({ item, showBadge = true }) => {
     }
     const handleAddToCart = () => {
         console.log("Add to Cart clicked for", item.title);
+        addToCart(item);
         // Implement Add to Cart functionality here
     }
   return (

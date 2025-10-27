@@ -17,10 +17,11 @@ const OrderSummary = ({ cartItems, subtotal, total, onPlaceOrder, paymentMethod,
                 <h3 className="text-xl md:text-2xl font-semibold text-gray-800">Your Order</h3>
                 
                 <div className="space-y-3 pb-3 border-b border-gray-100">
-                    {cartItems.map(item => (
+                    {
+                     cartItems.map(item => (
                         <div key={item.id} className="flex justify-between text-sm text-gray-600">
                             <span className="truncate pr-2">
-                                {item.name} <span className='font-normal'>(${item.price} x {item.quantity})</span>
+                                {item.title} <span className='font-normal'>(${item.price} x {item.quantity})</span>
                             </span>
                             <span className="font-medium text-gray-800">${item.price * item.quantity}</span>
                         </div>
