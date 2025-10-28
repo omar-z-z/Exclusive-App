@@ -1,13 +1,30 @@
+import { useEffect, useState } from "react";
+import { fetchProductCards } from "../data/productCards";
 import Button from "../basicComponents/Button";
 import ProductCard from "../basicComponents/ProductCard";
-import exploreProducts from "../data/exploreProducts";
 import MainSection from "../basicComponents/MainSection";
 import ArrowButton from "../basicComponents/ArrowButton";
 
 const ExploreProducts = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [showAll, setShowAll] = useState(false);
+
+  useEffect(() => {
+    fetchProductCards(20)
+      .then(setProducts)
+      .catch(console.error)
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading)
+    return (
+      <div className="flex items-center justify-center h-[60vh] text-2xl font-semibold text-gray-600 animate-pulse">
+        Loading our products for you...
+      </div>
+    );
   const handleViewAll = () => {
-    // Implement the logic for viewing all products
-    console.log("View All Products in explore products clicked");
+    setShowAll(!showAll);
   };
   return (
     <MainSection
@@ -21,7 +38,7 @@ const ExploreProducts = () => {
       }
     >
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-        {exploreProducts.map((it) => (
+        {(showAll ? products : products.slice(0, 8)).map((it) => (
           <ProductCard key={it.title} item={it} withAdd showBadge={false} />
         ))}
       </div>
@@ -31,7 +48,7 @@ const ExploreProducts = () => {
           className="px-12 py-4"
           onClick={handleViewAll}
         >
-          View All Products
+          {showAll ? "Hide Products" : "View All Products"}
         </Button>
       </div>
     </MainSection>

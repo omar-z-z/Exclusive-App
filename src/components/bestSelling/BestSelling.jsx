@@ -1,21 +1,26 @@
 import ProductCard from "../basicComponents/ProductCard";
-import { fetchBestSellers } from "../data/bestSellers";
 import MainSection from "../basicComponents/MainSection";
 import Button from "../basicComponents/Button";
 import { useEffect, useState } from "react";
+import { fetchProductCards } from "../data/productCards";
 
 const BestSelling = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchBestSellers()
+    fetchProductCards()
       .then(setProducts)
       .catch(console.error)
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p className="text-center">Loading best sellers...</p>;
+  if (loading)
+    return (
+      <div className="flex items-center justify-center h-[60vh] text-2xl font-semibold text-gray-600 animate-pulse">
+        Loading our products for you...
+      </div>
+    );
 
   const handleViewAll = () => {
     // Implement the logic for viewing all products

@@ -40,6 +40,8 @@ const productData = {
     { id: 4, url: "https://images.unsplash.com/photo-1676567463903-d9323a6cefb4?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fFBsYXlTdGF0aW9uJTIwNSUyMENvbnRyb2xsZXJ8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" },
   ],
 };
+// ProductDetails data is hard coded for demonstration purposes and because the API does not have that data.
+// In a real application, this data would be fetched from an API based on the product ID.
 
 const ProductDetails = () => {
   const [mainImage, setMainImage] = useState(productData.images[0]);
